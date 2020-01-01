@@ -25,3 +25,7 @@
 # Configuration Parameters 
 
 * ```name``` __(required)__ Name of Garage to appear in Home app
+
+# Credits
+
+This plugin is a fork of [Homebridge-Controls-Your-Garage-Door-Remote](https://github.com/kropatschek/Homebridge-Controls-Your-Garage-Door-Remote)

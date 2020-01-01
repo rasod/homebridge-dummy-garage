@@ -4,10 +4,10 @@ module.exports = function(homebridge) {
 	Service = homebridge.hap.Service;
 	Characteristic = homebridge.hap.Characteristic;
 
-	homebridge.registerAccessory('homebridge-dummy-garage', 'Dummy Garage', DummyGarage);
+	homebridge.registerAccessory('homebridge-dummy-garage', 'DummyGarage', DummyGarage);
 }
 
-class ControlsYourGarageDoorRemote {
+class DummyGarage {
 	constructor (log, config) {
 
 		//get config values
