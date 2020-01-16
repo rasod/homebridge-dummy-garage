@@ -1,0 +1,18 @@
+{
+  "plugin_alias": "DummyGarage",
+  "pluginType": "accessory",
+  "singular": false,
+  "schema": {
+    "title": "Dummy Garage",
+    "type": "object",
+    "properties": {
+      "name": {
+        "title": "Name",
+        "type": "string",
+        "required": true,
+        "default": "Dummy Garage",
+        "description": "Name of light to appear in Home app"
+      }
+    }
+  }
+}
