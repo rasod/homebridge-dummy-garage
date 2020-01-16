@@ -18,11 +18,17 @@ class DummyGarage {
 		this.lastOpened = new Date();
 		this.service = new Service.GarageDoorOpener(this.name, this.name);
 		this.setupGarageDoorOpenerService(this.service);
+		
+		this.informationService = new Service.AccessoryInformation();
+		this.informationService
+			.setCharacteristic(Characteristic.Manufacturer, 'rasod')
+			.setCharacteristic(Characteristic.Model, 'Dummy Garage')
+			.setCharacteristic(Characteristic.SerialNumber, this.name.replace(/\s/g, '').toUpperCase());
 
 	}
 
 	getServices () {
-		return [this.service];
+		return [this.informationService, this.service];
 	}
 
 	setupGarageDoorOpenerService (service) {
