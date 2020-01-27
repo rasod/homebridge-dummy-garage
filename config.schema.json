@@ -12,6 +12,12 @@
         "required": true,
         "default": "Dummy Garage",
         "description": "Name of light to appear in Home app"
+      },
+	  "autoCloseDelay": {
+        "title": "Auto Close Delay",
+        "type": "integer",
+        "default": 0,
+        "description": "Number of seconds after opening door will automatically close. 0 to disable."
       }
     }
   }

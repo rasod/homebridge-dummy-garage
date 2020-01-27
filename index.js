@@ -12,6 +12,7 @@ class DummyGarage {
 
 		//get config values
 		this.name = config['name'] || "Dummy Garage";
+		this.autoCloseDelay = config["autoCloseDelay"] === undefined ? 0 : Number(config["autoCloseDelay"]);
 
 		//initial setup
 		this.log = log;
@@ -23,6 +24,7 @@ class DummyGarage {
 		this.informationService
 			.setCharacteristic(Characteristic.Manufacturer, 'rasod')
 			.setCharacteristic(Characteristic.Model, 'Dummy Garage')
+			.setCharacteristic(Characteristic.FirmwareRevision, '1.1')
 			.setCharacteristic(Characteristic.SerialNumber, this.name.replace(/\s/g, '').toUpperCase());
 
 	}
@@ -45,7 +47,18 @@ class DummyGarage {
 					this.log("Opening: " + this.name)
 					this.lastOpened = new Date();
 					this.service.setCharacteristic(Characteristic.CurrentDoorState, Characteristic.CurrentDoorState.OPEN);
+					this.log.debug("autoCloseDelay = " + this.autoCloseDelay);
+					if (this.autoCloseDelay > 0) {
+						this.log("Closing in " + this.autoCloseDelay + " seconds.");
+						setTimeout(() => {
+							this.log("Auto Closing");
+							this.service.setCharacteristic(Characteristic.TargetDoorState, Characteristic.TargetDoorState.CLOSED);
+							this.service.setCharacteristic(Characteristic.CurrentDoorState, Characteristic.CurrentDoorState.CLOSED);
+						}, this.autoCloseDelay * 1000);
+					}
+					
 					callback();
+					
 				} else if (value === Characteristic.TargetDoorState.CLOSED)  {
 					this.log("Closing: " + this.name)
 					this.service.setCharacteristic(Characteristic.CurrentDoorState, Characteristic.CurrentDoorState.CLOSED);

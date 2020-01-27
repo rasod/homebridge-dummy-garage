@@ -25,6 +25,7 @@
 # Configuration Parameters 
 
 * ```name``` __(required)__ Name of Garage to appear in Home app
+* ```autoCloseDelay``` Number of seconds after opening door will automatically close. Exclude parameters to disable.
 
 # Credits
 
