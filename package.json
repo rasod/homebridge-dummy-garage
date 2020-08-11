@@ -22,7 +22,9 @@
     "node": ">=6.4.0",
     "homebridge": ">=0.3.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "node-persist": "^2.1.0"
+  },
   "scripts": {},
   "main": "index.js"
 }
