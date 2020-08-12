@@ -61,7 +61,7 @@ setupGarageDoorOpenerService (service) {
 				this.log("Opening: " + this.name)
 				this.lastOpened = new Date();
 				this.service.setCharacteristic(Characteristic.CurrentDoorState, Characteristic.CurrentDoorState.OPEN);
-				this.storage.setItemSync(this.name, true);
+				this.storage.setItem(this.name, true);
 				this.log.debug("autoCloseDelay = " + this.autoCloseDelay);
 				if (this.autoCloseDelay > 0) {
 					this.log("Closing in " + this.autoCloseDelay + " seconds.");
@@ -69,7 +69,7 @@ setupGarageDoorOpenerService (service) {
 						this.log("Auto Closing");
 						this.service.setCharacteristic(Characteristic.TargetDoorState, Characteristic.TargetDoorState.CLOSED);
 						this.service.setCharacteristic(Characteristic.CurrentDoorState, Characteristic.CurrentDoorState.CLOSED);
-						this.storage.setItemSync(this.name, false);
+						this.storage.setItem(this.name, false);
 					}, this.autoCloseDelay * 1000);
 				}
 				
@@ -78,7 +78,7 @@ setupGarageDoorOpenerService (service) {
 			} else if (value === Characteristic.TargetDoorState.CLOSED)  {
 				this.log("Closing: " + this.name)
 				this.service.setCharacteristic(Characteristic.CurrentDoorState, Characteristic.CurrentDoorState.CLOSED);
-				this.storage.setItemSync(this.name, false);
+				this.storage.setItem(this.name, false);
 				callback();
 			} else {
 				callback();
