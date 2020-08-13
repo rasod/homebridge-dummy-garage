@@ -30,7 +30,7 @@ class DummyGarage {
 		this.informationService
 			.setCharacteristic(Characteristic.Manufacturer, 'github/rasod')
 			.setCharacteristic(Characteristic.Model, 'Dummy Garage')
-			.setCharacteristic(Characteristic.FirmwareRevision, '1.1')
+			.setCharacteristic(Characteristic.FirmwareRevision, '1.2.2')
 			.setCharacteristic(Characteristic.SerialNumber, this.name.replace(/\s/g, '').toUpperCase());
 }
 
