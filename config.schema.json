@@ -11,7 +11,7 @@
         "type": "string",
         "required": true,
         "default": "Dummy Garage",
-        "description": "Name of light to appear in Home app"
+        "description": "Name of Garage to appear in Home app"
       },
 	  "autoCloseDelay": {
         "title": "Auto Close Delay",
