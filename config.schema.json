@@ -1,5 +1,5 @@
 {
-  "plugin_alias": "DummyGarage",
+  "pluginAlias": "DummyGarage",
   "pluginType": "accessory",
   "singular": false,
   "schema": {
@@ -13,7 +13,7 @@
         "default": "Dummy Garage",
         "description": "Name of Garage to appear in Home app"
       },
-	  "autoCloseDelay": {
+      "autoCloseDelay": {
         "title": "Auto Close Delay",
         "type": "integer",
         "default": 0,
