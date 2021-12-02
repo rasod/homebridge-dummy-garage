@@ -1,11 +1,9 @@
-# homebridge-dummy-garage
-[Homebridge](https://github.com/nfarina/homebridge) plugin to create a dummy HomeKit Garage Door accessory. Why? iOS 13 CarPlay allows you to easily access your Garage when arriving and leaving your house. This plug-in allows to to create a dummy Garage door which you can use as an automation trigger. Pull up to your house open the "Garage" on your dash which will unlock your front door turn lights on etc.
-
-![CarPlay Screenshot](https://github.com/rasod/homebridge-dummy-garage/blob/master/carplay.png?raw=true)
+# homebridge-deconz-garage
+[Homebridge](https://github.com/nfarina/homebridge) plugin to create a HomeKit Garage Door accessory which interacts with Deconz registered Zigbee devices. 
 
 # Installation
 1. Install [Homebridge](https://github.com/nfarina/homebridge#installation)
-2. Install this plugin using `npm install -g homebridge-dummy-garage`
+2. Install this plugin using `npm install -g homebridge-deconz-garage`
 3. Edit your configuration file like the example below and restart Homebridge
 
 # Configuration Example
@@ -27,8 +25,9 @@
 # Configuration Parameters 
 
 * ```name``` __(required)__ Name of Garage to appear in Home app
-* ```autoCloseDelay``` Number of seconds after opening door will automatically close. Exclude parameter to disable.
 
 # Credits
 
-This plugin is a fork of [Homebridge-Controls-Your-Garage-Door-Remote](https://github.com/kropatschek/Homebridge-Controls-Your-Garage-Door-Remote)
+This plugin is a fork of [homebridge-dummy-garage](https://github.com/rasod/homebridge-dummy-garage)
+which is a fork of:[Homebridge-Controls-Your-Garage-Door-Remote](https://github.com/kropatschek/Homebridge-Controls-Your-Garage-Door-Remote)
+
