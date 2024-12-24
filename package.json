@@ -1,6 +1,6 @@
 {
   "name": "homebridge-dummy-garage",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Dummy Garage Opener for Homebridge",
   "license": "MIT",
   "repository": {
@@ -19,8 +19,8 @@
     "carplay"
   ],
   "engines": {
-    "node": ">=6.4.0",
-    "homebridge": ">=0.3.0"
+    "homebridge": ">=1.8.0 || >=2.0.0",
+    "node": ">=18"
   },
   "dependencies": {
     "node-persist": "^2.1.0"
